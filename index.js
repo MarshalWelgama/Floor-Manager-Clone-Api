@@ -5,11 +5,6 @@ const cors = require('cors')
 const app = express()
 const port = 8888
 
-// app.get('/customers', (req, res) => {
-//     let customersArr = ["hi", "world"]
-//   res.send(customersArr)
-
-// })
 app.use(cors({
 			origin: "*",
 		}))
