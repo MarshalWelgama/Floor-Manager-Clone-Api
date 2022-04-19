@@ -3,7 +3,6 @@ const mongoose = require("mongoose")
 const routes = require("./router")
 const cors = require('cors')
 const app = express()
-const port = 8888
 
 app.use(cors({
 			origin: "*",

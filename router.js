@@ -5,6 +5,10 @@ const moment = require("moment")
 const router = express.Router()
 
 
+router.get("/health", async (req, res) => {
+	console.log('hi')
+	res.send('ok')
+})
 //creates new customer
 router.post("/:session/customers", async (req, res) => {
     console.log(req.body.number)
@@ -32,6 +36,7 @@ router.delete("/customers/:id", async (req, res) => {
 //get all customer info based on session id
 router.get("/:session/customers/", async (req, res) => {
 	const post = await Customer.find({session: req.params.session})
+	console.log('here')
 	res.send(post)
 })
 
@@ -55,5 +60,7 @@ router.post("/session", async (req, res) => {
 	console.log(session._id)
 	console.log(session.guid)
 })
+
+
 
 module.exports = router
