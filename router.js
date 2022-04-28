@@ -6,7 +6,6 @@ const router = express.Router()
 
 
 router.get("/health", async (req, res) => {
-	console.log('hi')
 	res.send('ok')
 })
 //creates new customer
