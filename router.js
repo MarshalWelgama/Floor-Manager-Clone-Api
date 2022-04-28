@@ -6,7 +6,6 @@ const router = express.Router()
 
 
 router.get("/health", async (req, res) => {
-	console.log('this is the release branch ddude')
 	res.send('ok')
 })
 //creates new customer
